@@ -55,7 +55,7 @@ export default function Logo({ className = "", mark = false }: Props) {
           A
         </text>
       </svg>
-      <span className="flex flex-col leading-none">
+      <span className="flex flex-col leading-none whitespace-nowrap">
         <span className="font-display text-xl tracking-wide text-ink-900 dark:text-cream">
           Arcade <span className="text-gold-600 dark:text-gold-300">Digital</span> Galaxy
         </span>
