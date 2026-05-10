@@ -21,16 +21,16 @@ export const site = {
   ],
 };
 
-// Top-level navigation. Kept tight so the desktop bar doesn't wrap;
-// secondary sections (Little Ones, Journal) remain reachable via scroll.
 export const nav = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Collections", href: "#collections" },
+  { label: "Kids", href: "#kids" },
   { label: "Live", href: "#live" },
   { label: "Films", href: "#films" },
   { label: "Stories", href: "#testimonials" },
+  { label: "Journal", href: "#journal" },
   { label: "Contact", href: "#contact" },
 ];
 

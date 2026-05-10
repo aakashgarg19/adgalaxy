@@ -26,7 +26,7 @@ export default function Navbar() {
       <div className="container-x flex items-center justify-between">
         <Logo />
 
-        <nav className="hidden xl:flex items-center gap-7">
+        <nav className="hidden xl:flex items-center gap-5 2xl:gap-7">
           {nav.map((n) => (
             <a
               key={n.href}
