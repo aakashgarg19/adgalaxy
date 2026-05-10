@@ -9,7 +9,7 @@ export default function WhyUs() {
     >
       <div className="absolute inset-0 opacity-20 pointer-events-none dark:opacity-30">
         <img
-          src="https://adgalaxy.in/wp-content/uploads/2026/02/ring-ceremony-groom-portrait.jpg"
+          src="/photos/ring-ceremony-groom-portrait.jpg"
           alt=""
           className="h-full w-full object-cover"
         />

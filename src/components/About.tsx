@@ -9,7 +9,7 @@ export default function About() {
           <Reveal>
             <div className="relative h-[480px] lg:h-[640px] overflow-hidden rounded-[4px] img-zoom">
               <img
-                src="https://adgalaxy.in/wp-content/uploads/2019/02/close-up-shot-bride-groom.jpg"
+                src="/photos/close-up-shot-bride-groom.jpg"
                 alt="Bride and groom close-up"
                 className="h-full w-full object-cover"
               />

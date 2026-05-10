@@ -38,7 +38,7 @@ export const services = [
     description:
       "Pre-wedding sessions, bridal portraits, candid coverage, album design, highlight reels and family photography — the whole arc of your big day, told beautifully.",
     image:
-      "https://adgalaxy.in/wp-content/uploads/2026/02/ring-ceremony-staircase-portrait-couple.jpg",
+      "/photos/ring-ceremony-staircase-portrait-couple.jpg",
   },
   {
     title: "Pre-Wedding & Couples",
@@ -46,7 +46,7 @@ export const services = [
     description:
       "Cinematic couple sessions in heritage, urban or natural settings — tailored to your story, your wardrobe and the mood you want to remember forever.",
     image:
-      "https://adgalaxy.in/wp-content/uploads/2026/05/pre-wedding-photoshoot.jpg",
+      "/photos/pre-wedding-photoshoot.jpg",
   },
   {
     title: "Maternity Photography",
@@ -54,14 +54,14 @@ export const services = [
     description:
       "Solo and couple maternity sessions — indoor or outdoor, with multiple outfit changes, candid and posed photography, and intimate bump detail shots.",
     image:
-      "https://adgalaxy.in/wp-content/uploads/2026/05/maternity-shoot-image.jpg",
+      "/photos/maternity-shoot-image.jpg",
   },
   {
     title: "Newborn & Baby Shoots",
     short: "Tender, safe, beautifully styled newborn sessions.",
     description:
       "Posed and lifestyle newborn photography with safe handling, themed props, parent portraits and detailed close-up shots that you'll treasure for a lifetime.",
-    image: "https://adgalaxy.in/wp-content/uploads/2026/05/baby-shoot.jpg",
+    image: "/photos/baby-shoot.jpg",
   },
   {
     title: "Birthday Photography",
@@ -69,7 +69,7 @@ export const services = [
     description:
       "Themed décor coverage, kids' parties, cake-smash sessions and adult milestone events — captured with genuine joy, candid moments and styled portraits.",
     image:
-      "https://adgalaxy.in/wp-content/uploads/2026/05/baby-birthday-celebration.jpg",
+      "/photos/baby-birthday-celebration.jpg",
   },
   {
     title: "Anniversary Sessions",
@@ -77,7 +77,7 @@ export const services = [
     description:
       "Couple portrait sessions, family celebration coverage, surprise event documentation and styled romantic setups for the milestones that matter.",
     image:
-      "https://adgalaxy.in/wp-content/uploads/2026/05/25-anniversary-couple.jpg",
+      "/photos/25-anniversary-couple.jpg",
   },
   {
     title: "Corporate & Branding",
@@ -85,7 +85,7 @@ export const services = [
     description:
       "Executive portraits, LinkedIn personal branding, workplace coverage, team interaction shots, marketing imagery and full event photography for businesses.",
     image:
-      "https://adgalaxy.in/wp-content/uploads/2019/02/bride-red-dupatta-veil-portrait.jpg",
+      "/photos/bride-red-dupatta-veil-portrait.jpg",
   },
   {
     title: "Live Telecast",
@@ -93,7 +93,7 @@ export const services = [
     description:
       "Professional live streaming to Facebook, YouTube, Instagram and Twitter — so the people who matter can be present from anywhere in the world.",
     image:
-      "https://adgalaxy.in/wp-content/uploads/2019/02/engagement-couple-closeup-pose.jpg",
+      "/photos/engagement-couple-closeup-pose.jpg",
   },
 ];
 
@@ -102,60 +102,60 @@ export const portfolio = [
     title: "Harmanjeet & Tavleen",
     category: "Wedding",
     image:
-      "https://adgalaxy.in/wp-content/uploads/2019/02/bride-red-dupatta-veil-portrait.jpg",
+      "/photos/bride-red-dupatta-veil-portrait.jpg",
   },
   {
     title: "Ring Ceremony — Staircase",
     category: "Engagement",
     image:
-      "https://adgalaxy.in/wp-content/uploads/2026/02/ring-ceremony-staircase-portrait-couple.jpg",
+      "/photos/ring-ceremony-staircase-portrait-couple.jpg",
   },
   {
     title: "The Quiet Glow",
     category: "Maternity",
     image:
-      "https://adgalaxy.in/wp-content/uploads/2026/05/maternity-shoot-image.jpg",
+      "/photos/maternity-shoot-image.jpg",
   },
   {
     title: "Tiny Hands",
     category: "Newborn",
-    image: "https://adgalaxy.in/wp-content/uploads/2026/05/baby-shoot.jpg",
+    image: "/photos/baby-shoot.jpg",
   },
   {
     title: "25 Years, Still Us",
     category: "Anniversary",
     image:
-      "https://adgalaxy.in/wp-content/uploads/2026/05/25-anniversary-couple.jpg",
+      "/photos/25-anniversary-couple.jpg",
   },
   {
     title: "First Candle",
     category: "Birthday",
     image:
-      "https://adgalaxy.in/wp-content/uploads/2026/05/baby-birthday-celebration.jpg",
+      "/photos/baby-birthday-celebration.jpg",
   },
   {
     title: "Pre-Wedding Reverie",
     category: "Pre-Wedding",
     image:
-      "https://adgalaxy.in/wp-content/uploads/2026/05/pre-wedding-photoshoot.jpg",
+      "/photos/pre-wedding-photoshoot.jpg",
   },
   {
     title: "Deepanshu & Bandana",
     category: "Wedding",
     image:
-      "https://adgalaxy.in/wp-content/uploads/2019/02/close-up-shot-bride-groom.jpg",
+      "/photos/close-up-shot-bride-groom.jpg",
   },
   {
     title: "Engagement Closeup",
     category: "Engagement",
     image:
-      "https://adgalaxy.in/wp-content/uploads/2019/02/engagement-couple-closeup-pose.jpg",
+      "/photos/engagement-couple-closeup-pose.jpg",
   },
   {
     title: "The Groom's Look",
     category: "Wedding",
     image:
-      "https://adgalaxy.in/wp-content/uploads/2026/02/ring-ceremony-groom-portrait.jpg",
+      "/photos/ring-ceremony-groom-portrait.jpg",
   },
 ];
 

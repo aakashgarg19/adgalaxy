@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { ArrowRight, Camera } from "lucide-react";
 
 const heroImages = [
-  "https://adgalaxy.in/wp-content/uploads/2019/02/bride-red-dupatta-veil-portrait.jpg",
-  "https://adgalaxy.in/wp-content/uploads/2026/02/ring-ceremony-staircase-portrait-couple.jpg",
-  "https://adgalaxy.in/wp-content/uploads/2026/05/pre-wedding-photoshoot.jpg",
+  "/photos/bride-red-dupatta-veil-portrait.jpg",
+  "/photos/ring-ceremony-staircase-portrait-couple.jpg",
+  "/photos/pre-wedding-photoshoot.jpg",
 ];
 
 export default function Hero() {

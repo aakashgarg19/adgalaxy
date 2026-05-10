@@ -6,7 +6,7 @@ export default function CTA() {
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="https://adgalaxy.in/wp-content/uploads/2026/05/pre-wedding-photoshoot.jpg"
+          src="/photos/pre-wedding-photoshoot.jpg"
           alt=""
           className="h-full w-full object-cover"
         />
