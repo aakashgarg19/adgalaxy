@@ -8,7 +8,7 @@
       name="description"
       content="Arcade Digital Galaxy — Delhi's premier wedding & lifestyle photography studio since 1986. Cinematic storytelling for weddings, maternity, newborns, anniversaries and corporate events."
     />
-    <meta name="theme-color" content="#0c0b09" />
+    <meta name="theme-color" content="#f6f1e7" />
     <meta property="og:title" content="Arcade Digital Galaxy — Cinematic Photography Studio" />
     <meta
       property="og:description"
@@ -20,9 +20,18 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=Allura&display=swap"
       rel="stylesheet"
     />
+    <script>
+      // Apply stored theme before paint to avoid flash. Default: light.
+      (function () {
+        try {
+          var t = localStorage.getItem("adg-theme");
+          if (t === "dark") document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
     <title>Arcade Digital Galaxy — Cinematic Photography Since 1986</title>
   </head>
-  <body class="bg-ink-900 text-cream antialiased">
+  <body class="bg-cream text-ink-900 antialiased dark:bg-ink-900 dark:text-cream">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

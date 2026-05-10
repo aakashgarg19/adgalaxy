@@ -47,11 +47,11 @@ const SocialIcon = ({ name }: { name: string }) => {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-ink-900 border-t border-cream/10 pt-20 pb-10">
+    <footer className="relative bg-cream border-t border-ink-900/10 pt-20 pb-10 dark:bg-ink-900 dark:border-cream/10">
       <div className="container-x grid grid-cols-1 md:grid-cols-12 gap-10">
         <div className="md:col-span-5">
           <Logo />
-          <p className="mt-6 max-w-sm text-sm text-cream/60 leading-relaxed">
+          <p className="mt-6 max-w-sm text-sm text-ink-600 leading-relaxed dark:text-cream/60">
             {site.description}
           </p>
           <div className="mt-6 flex items-center gap-3">
@@ -62,7 +62,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={s.name}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/15 text-cream/70 hover:border-gold-300 hover:text-gold-300 transition"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-900/15 text-ink-700 hover:border-gold-600 hover:text-gold-700 transition dark:border-cream/15 dark:text-cream/70 dark:hover:border-gold-300 dark:hover:text-gold-300"
               >
                 <SocialIcon name={s.name} />
               </a>
@@ -71,13 +71,13 @@ export default function Footer() {
         </div>
 
         <div className="md:col-span-2">
-          <h4 className="text-[11px] uppercase tracking-widest2 text-gold-300 mb-5">
+          <h4 className="text-[11px] uppercase tracking-widest2 text-gold-700 mb-5 dark:text-gold-300">
             Explore
           </h4>
-          <ul className="space-y-3 text-sm text-cream/70">
+          <ul className="space-y-3 text-sm text-ink-700 dark:text-cream/70">
             {nav.map((n) => (
               <li key={n.href}>
-                <a href={n.href} className="hover:text-gold-300 transition">
+                <a href={n.href} className="hover:text-gold-700 transition dark:hover:text-gold-300">
                   {n.label}
                 </a>
               </li>
@@ -86,13 +86,13 @@ export default function Footer() {
         </div>
 
         <div className="md:col-span-3">
-          <h4 className="text-[11px] uppercase tracking-widest2 text-gold-300 mb-5">
+          <h4 className="text-[11px] uppercase tracking-widest2 text-gold-700 mb-5 dark:text-gold-300">
             Services
           </h4>
-          <ul className="space-y-3 text-sm text-cream/70">
+          <ul className="space-y-3 text-sm text-ink-700 dark:text-cream/70">
             {services.slice(0, 6).map((s) => (
               <li key={s.title}>
-                <a href="#services" className="hover:text-gold-300 transition">
+                <a href="#services" className="hover:text-gold-700 transition dark:hover:text-gold-300">
                   {s.title}
                 </a>
               </li>
@@ -101,15 +101,15 @@ export default function Footer() {
         </div>
 
         <div className="md:col-span-2">
-          <h4 className="text-[11px] uppercase tracking-widest2 text-gold-300 mb-5">
+          <h4 className="text-[11px] uppercase tracking-widest2 text-gold-700 mb-5 dark:text-gold-300">
             Studio
           </h4>
-          <ul className="space-y-3 text-sm text-cream/70">
+          <ul className="space-y-3 text-sm text-ink-700 dark:text-cream/70">
             <li>{site.contact.address}</li>
             <li>
               <a
                 href={`tel:${site.contact.phoneRaw}`}
-                className="hover:text-gold-300 transition"
+                className="hover:text-gold-700 transition dark:hover:text-gold-300"
               >
                 {site.contact.phone}
               </a>
@@ -117,7 +117,7 @@ export default function Footer() {
             <li>
               <a
                 href={`mailto:${site.contact.email}`}
-                className="hover:text-gold-300 transition"
+                className="hover:text-gold-700 transition dark:hover:text-gold-300"
               >
                 {site.contact.email}
               </a>
@@ -126,12 +126,12 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="container-x mt-16 pt-8 border-t border-cream/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/40">
+      <div className="container-x mt-16 pt-8 border-t border-ink-900/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ink-500 dark:border-cream/10 dark:text-cream/40">
         <p>
           © {new Date().getFullYear()} {site.brand}. Crafted with care in New Delhi.
         </p>
         <p className="flex items-center gap-3">
-          <span className="font-script text-2xl text-gold-300 leading-none">
+          <span className="font-script text-2xl text-gold-700 leading-none dark:text-gold-300">
             Since
           </span>
           1986 — and counting.

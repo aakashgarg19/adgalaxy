@@ -7,7 +7,7 @@ export default function Contact() {
   const [sent, setSent] = useState(false);
 
   return (
-    <section id="contact" className="relative bg-ink-900 py-24 lg:py-32">
+    <section id="contact" className="relative bg-cream py-24 lg:py-32 dark:bg-ink-900">
       <div className="container-x grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         <div className="lg:col-span-5">
           <Reveal>
@@ -23,7 +23,7 @@ export default function Contact() {
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 text-cream/60 leading-relaxed max-w-md">
+            <p className="mt-6 text-ink-600 leading-relaxed max-w-md dark:text-cream/60">
               We respond to every enquiry personally — usually within 24
               hours. Share a few details and we'll come back with package
               options, available dates and a few honest questions.
@@ -65,7 +65,7 @@ export default function Contact() {
                 setSent(true);
                 setTimeout(() => setSent(false), 4000);
               }}
-              className="rounded-[4px] border border-cream/10 bg-gradient-to-br from-ink-800/80 to-ink-900 p-8 sm:p-10"
+              className="rounded-[4px] border border-ink-900/10 bg-gradient-to-br from-white to-ink-50 p-8 sm:p-10 shadow-sm dark:border-cream/10 dark:from-ink-800/80 dark:to-ink-900 dark:shadow-none"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <Field label="Your name" name="name" placeholder="Anaya & Rohit" />
@@ -85,12 +85,12 @@ export default function Contact() {
               </div>
 
               <div className="mt-5">
-                <label className="block text-[11px] uppercase tracking-widest2 text-cream/50 mb-2">
+                <label className="block text-[11px] uppercase tracking-widest2 text-ink-500 mb-2 dark:text-cream/50">
                   Service
                 </label>
                 <select
                   name="service"
-                  className="w-full bg-ink-900/60 border border-cream/10 rounded-md px-4 py-3 text-cream focus:border-gold-300 focus:outline-none"
+                  className="w-full bg-white border border-ink-900/15 rounded-md px-4 py-3 text-ink-900 focus:border-gold-600 focus:outline-none dark:bg-ink-900/60 dark:border-cream/10 dark:text-cream dark:focus:border-gold-300"
                   defaultValue=""
                 >
                   <option value="" disabled>
@@ -108,19 +108,19 @@ export default function Contact() {
               </div>
 
               <div className="mt-5">
-                <label className="block text-[11px] uppercase tracking-widest2 text-cream/50 mb-2">
+                <label className="block text-[11px] uppercase tracking-widest2 text-ink-500 mb-2 dark:text-cream/50">
                   Tell us a bit more
                 </label>
                 <textarea
                   name="message"
                   rows={5}
                   placeholder="Where, when, who, the vibe you're going for..."
-                  className="w-full bg-ink-900/60 border border-cream/10 rounded-md px-4 py-3 text-cream placeholder-cream/30 focus:border-gold-300 focus:outline-none resize-none"
+                  className="w-full bg-white border border-ink-900/15 rounded-md px-4 py-3 text-ink-900 placeholder-ink-400 focus:border-gold-600 focus:outline-none resize-none dark:bg-ink-900/60 dark:border-cream/10 dark:text-cream dark:placeholder-cream/30 dark:focus:border-gold-300"
                 />
               </div>
 
               <div className="mt-8 flex items-center justify-between gap-4 flex-wrap">
-                <p className="text-xs text-cream/40">
+                <p className="text-xs text-ink-400 dark:text-cream/40">
                   By sending this you agree to be contacted about your enquiry.
                 </p>
                 <button type="submit" className="btn-primary">
@@ -148,14 +148,14 @@ function Field({
 }) {
   return (
     <div>
-      <label className="block text-[11px] uppercase tracking-widest2 text-cream/50 mb-2">
+      <label className="block text-[11px] uppercase tracking-widest2 text-ink-500 mb-2 dark:text-cream/50">
         {label}
       </label>
       <input
         name={name}
         type={type}
         placeholder={placeholder}
-        className="w-full bg-ink-900/60 border border-cream/10 rounded-md px-4 py-3 text-cream placeholder-cream/30 focus:border-gold-300 focus:outline-none"
+        className="w-full bg-white border border-ink-900/15 rounded-md px-4 py-3 text-ink-900 placeholder-ink-400 focus:border-gold-600 focus:outline-none dark:bg-ink-900/60 dark:border-cream/10 dark:text-cream dark:placeholder-cream/30 dark:focus:border-gold-300"
       />
     </div>
   );
@@ -174,14 +174,14 @@ function ContactRow({
 }) {
   const Inner = (
     <div className="flex items-start gap-4 group">
-      <span className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/15 text-gold-300 group-hover:border-gold-300 transition">
+      <span className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-900/15 text-gold-700 group-hover:border-gold-600 transition dark:border-cream/15 dark:text-gold-300 dark:group-hover:border-gold-300">
         {icon}
       </span>
       <div>
-        <div className="text-[11px] uppercase tracking-widest2 text-cream/40">
+        <div className="text-[11px] uppercase tracking-widest2 text-ink-500 dark:text-cream/40">
           {label}
         </div>
-        <div className="font-display text-xl text-cream group-hover:text-gold-300 transition">
+        <div className="font-display text-xl text-ink-900 group-hover:text-gold-700 transition dark:text-cream dark:group-hover:text-gold-300">
           {value}
         </div>
       </div>

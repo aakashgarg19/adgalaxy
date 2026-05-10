@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
@@ -9,10 +10,20 @@ import Testimonials from "./components/Testimonials";
 import CTA from "./components/CTA";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { useTheme } from "./hooks/useTheme";
 
 export default function App() {
+  // Initialize the theme on first paint (the inline script in index.html
+  // already applied the stored class; this hook keeps state + storage in sync).
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", theme === "dark" ? "#0c0b09" : "#f6f1e7");
+  }, [theme]);
+
   return (
-    <div className="min-h-screen bg-ink-900 text-cream">
+    <div className="min-h-screen bg-cream text-ink-900 dark:bg-ink-900 dark:text-cream">
       <Navbar />
       <main>
         <Hero />

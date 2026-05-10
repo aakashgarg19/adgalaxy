@@ -3,12 +3,23 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: light;
+}
+
+html.dark {
   color-scheme: dark;
 }
 
 html,
 body,
 #root {
+  background-color: #f6f1e7;
+  color: #0c0b09;
+}
+
+html.dark,
+html.dark body,
+html.dark #root {
   background-color: #0c0b09;
   color: #f6f1e7;
 }
@@ -33,11 +44,17 @@ body {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
+  background: #f6f1e7;
+}
+html.dark ::-webkit-scrollbar-track {
   background: #0c0b09;
 }
 ::-webkit-scrollbar-thumb {
-  background: #3f3b32;
+  background: #cfcabd;
   border-radius: 8px;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #3f3b32;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #b8892a;
@@ -49,26 +66,41 @@ body {
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-3 text-[11px] uppercase tracking-widest2 text-gold-300;
+    @apply inline-flex items-center gap-3 text-[11px] uppercase tracking-widest2 text-gold-600 dark:text-gold-300;
   }
 
   .heading-display {
-    @apply font-display font-light leading-[1.05] tracking-tight;
+    @apply font-display font-light leading-[1.05] tracking-tight text-ink-900 dark:text-cream;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-400 px-7 py-3.5 text-[12px] font-medium uppercase tracking-widest2 text-ink-900 transition hover:bg-gold-300 focus:outline-none focus:ring-2 focus:ring-gold-300 focus:ring-offset-2 focus:ring-offset-ink-900;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-500 px-7 py-3.5 text-[12px] font-medium uppercase tracking-widest2 text-ink-900 transition hover:bg-gold-600 hover:text-cream focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2 focus:ring-offset-cream dark:bg-gold-400 dark:hover:bg-gold-300 dark:hover:text-ink-900 dark:focus:ring-gold-300 dark:focus:ring-offset-ink-900;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-cream/20 px-7 py-3.5 text-[12px] font-medium uppercase tracking-widest2 text-cream transition hover:border-gold-300 hover:text-gold-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink-900/25 px-7 py-3.5 text-[12px] font-medium uppercase tracking-widest2 text-ink-900 transition hover:border-gold-600 hover:text-gold-700 dark:border-cream/20 dark:text-cream dark:hover:border-gold-300 dark:hover:text-gold-300;
   }
 
   .gold-line {
-    @apply block h-px w-12 bg-gradient-to-r from-gold-400 to-transparent;
+    @apply block h-px w-12 bg-gradient-to-r from-gold-500 to-transparent dark:from-gold-400;
   }
 
   .text-gradient-gold {
+    background: linear-gradient(
+      120deg,
+      #b8892a 0%,
+      #d4a73f 35%,
+      #8e6720 65%,
+      #b8892a 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 6s linear infinite;
+  }
+
+  html.dark .text-gradient-gold {
     background: linear-gradient(
       120deg,
       #f3e6bd 0%,
@@ -88,10 +120,14 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px);
   background-size: 3px 3px;
   pointer-events: none;
   opacity: 0.4;
+  mix-blend-mode: multiply;
+}
+html.dark .grain::before {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   mix-blend-mode: overlay;
 }
 

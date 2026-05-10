@@ -25,7 +25,7 @@ export default function Portfolio() {
   );
 
   return (
-    <section id="portfolio" className="relative bg-ink-900 py-24 lg:py-32">
+    <section id="portfolio" className="relative bg-cream py-24 lg:py-32 dark:bg-ink-900">
       <div className="container-x">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12">
           <div>
@@ -52,8 +52,8 @@ export default function Portfolio() {
                   onClick={() => setActive(c)}
                   className={`rounded-full border px-4 py-2 text-[11px] uppercase tracking-widest2 transition ${
                     active === c
-                      ? "border-gold-300 bg-gold-300 text-ink-900"
-                      : "border-cream/20 text-cream/60 hover:text-gold-300 hover:border-gold-300/50"
+                      ? "border-gold-500 bg-gold-500 text-ink-900 dark:border-gold-300 dark:bg-gold-300"
+                      : "border-ink-900/20 text-ink-700 hover:text-gold-700 hover:border-gold-500/60 dark:border-cream/20 dark:text-cream/60 dark:hover:text-gold-300 dark:hover:border-gold-300/50"
                   }`}
                 >
                   {c}
@@ -71,7 +71,7 @@ export default function Portfolio() {
               <Reveal
                 key={p.title + i}
                 delay={(i % 8) * 0.05}
-                className={`group relative overflow-hidden rounded-[4px] bg-ink-800 img-zoom ${
+                className={`group relative overflow-hidden rounded-[4px] bg-ink-100 img-zoom dark:bg-ink-800 ${
                   isTall ? "row-span-2" : ""
                 } ${isWide ? "col-span-2" : ""}`}
               >

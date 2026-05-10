@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative bg-gradient-to-b from-ink-900 via-ink-800 to-ink-900 py-24 lg:py-32"
+      className="relative bg-gradient-to-b from-cream via-ink-50 to-cream py-24 lg:py-32 dark:from-ink-900 dark:via-ink-800 dark:to-ink-900"
     >
       <div className="container-x">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
@@ -25,7 +25,7 @@ export default function Services() {
             </Reveal>
           </div>
           <Reveal delay={0.1}>
-            <p className="max-w-md text-cream/60 leading-relaxed">
+            <p className="max-w-md text-ink-600 leading-relaxed dark:text-cream/60">
               From the intimate quiet of a maternity session to the chaos of
               a 500-guest wedding — every shoot gets the same attention,
               tailored coverage, and end-to-end care.
@@ -38,7 +38,7 @@ export default function Services() {
             <Reveal key={s.title} delay={i * 0.05}>
               <a
                 href="#contact"
-                className="group relative block overflow-hidden rounded-[4px] bg-ink-800 border border-cream/5 hover:border-gold-400/40 transition-colors"
+                className="group relative block overflow-hidden rounded-[4px] bg-white border border-ink-900/10 hover:border-gold-500/60 transition-colors shadow-sm hover:shadow-lg dark:bg-ink-800 dark:border-cream/5 dark:hover:border-gold-400/40 dark:shadow-none"
               >
                 <div className="relative aspect-[4/5] overflow-hidden img-zoom">
                   <img
@@ -48,7 +48,7 @@ export default function Services() {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/40 to-transparent" />
-                  <div className="absolute top-4 right-4 h-9 w-9 rounded-full border border-cream/30 flex items-center justify-center text-cream/70 transition group-hover:border-gold-300 group-hover:text-gold-300 group-hover:-rotate-12">
+                  <div className="absolute top-4 right-4 h-9 w-9 rounded-full border border-cream/30 flex items-center justify-center text-cream/80 transition group-hover:border-gold-300 group-hover:text-gold-300 group-hover:-rotate-12">
                     <ArrowUpRight className="h-4 w-4" />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-5 lg:p-6">
@@ -60,7 +60,7 @@ export default function Services() {
                     </h3>
                   </div>
                 </div>
-                <div className="p-5 lg:p-6 text-sm text-cream/60 leading-relaxed border-t border-cream/5">
+                <div className="p-5 lg:p-6 text-sm text-ink-600 leading-relaxed border-t border-ink-900/5 dark:text-cream/60 dark:border-cream/5">
                   {s.description}
                 </div>
               </a>
