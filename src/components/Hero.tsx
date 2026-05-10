@@ -60,7 +60,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.25 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <a href="#portfolio" className="btn-primary">
+            <a href="#collections" className="btn-primary">
               View Portfolio <ArrowRight className="h-4 w-4" />
             </a>
             <a href="#contact" className="btn-ghost">

@@ -39,7 +39,7 @@ export default function CTA() {
               Plan my shoot <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="#portfolio"
+              href="#collections"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-cream/30 px-7 py-3.5 text-[12px] font-medium uppercase tracking-widest2 text-cream transition hover:border-gold-300 hover:text-gold-300"
             >
               See more work
