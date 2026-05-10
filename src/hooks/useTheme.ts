@@ -5,15 +5,15 @@ export type Theme = "light" | "dark";
 const STORAGE_KEY = "adg-theme";
 
 function readInitial(): Theme {
-  if (typeof window === "undefined") return "light";
+  if (typeof window === "undefined") return "dark";
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored === "light" || stored === "dark") return stored;
   } catch {
     /* noop */
   }
-  // Light by default (matches the inline pre-paint script in index.html)
-  return "light";
+  // Dark by default (matches the inline pre-paint script in index.html)
+  return "dark";
 }
 
 function apply(theme: Theme) {
