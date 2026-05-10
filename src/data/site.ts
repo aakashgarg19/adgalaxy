@@ -16,17 +16,20 @@ export const site = {
   social: [
     { name: "Instagram", url: "https://instagram.com/" },
     { name: "Facebook", url: "https://facebook.com/" },
-    { name: "YouTube", url: "https://youtube.com/" },
+    { name: "YouTube", url: "https://www.youtube.com/@arcadedigitalgalaxy" },
     { name: "Twitter", url: "https://twitter.com/" },
   ],
 };
 
+// Top-level navigation. Kept tight so the desktop bar doesn't wrap;
+// secondary sections (Little Ones, Journal) remain reachable via scroll.
 export const nav = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Why Us", href: "#why" },
+  { label: "Collections", href: "#collections" },
+  { label: "Live", href: "#live" },
+  { label: "Films", href: "#films" },
   { label: "Stories", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
@@ -37,24 +40,21 @@ export const services = [
     short: "Full-day cinematic wedding storytelling.",
     description:
       "Pre-wedding sessions, bridal portraits, candid coverage, album design, highlight reels and family photography — the whole arc of your big day, told beautifully.",
-    image:
-      "/photos/ring-ceremony-staircase-portrait-couple.jpg",
+    image: "/photos/ring-ceremony-staircase-portrait-couple.jpg",
   },
   {
     title: "Pre-Wedding & Couples",
     short: "Romantic, location-led shoots before the big day.",
     description:
       "Cinematic couple sessions in heritage, urban or natural settings — tailored to your story, your wardrobe and the mood you want to remember forever.",
-    image:
-      "/photos/pre-wedding-photoshoot.jpg",
+    image: "/photos/pre-wedding-photoshoot.jpg",
   },
   {
     title: "Maternity Photography",
     short: "Soft, glowing portraits of the in-between.",
     description:
       "Solo and couple maternity sessions — indoor or outdoor, with multiple outfit changes, candid and posed photography, and intimate bump detail shots.",
-    image:
-      "/photos/maternity-shoot-image.jpg",
+    image: "/photos/maternity-shoot-image.jpg",
   },
   {
     title: "Newborn & Baby Shoots",
@@ -68,96 +68,126 @@ export const services = [
     short: "First birthdays, cake smashes, milestone parties.",
     description:
       "Themed décor coverage, kids' parties, cake-smash sessions and adult milestone events — captured with genuine joy, candid moments and styled portraits.",
-    image:
-      "/photos/baby-birthday-celebration.jpg",
+    image: "/photos/baby-birthday-celebration.jpg",
   },
   {
     title: "Anniversary Sessions",
     short: "Years together, rendered in light.",
     description:
       "Couple portrait sessions, family celebration coverage, surprise event documentation and styled romantic setups for the milestones that matter.",
-    image:
-      "/photos/25-anniversary-couple.jpg",
+    image: "/photos/25-anniversary-couple.jpg",
   },
   {
     title: "Corporate & Branding",
     short: "Headshots, events, LinkedIn-ready imagery.",
     description:
       "Executive portraits, LinkedIn personal branding, workplace coverage, team interaction shots, marketing imagery and full event photography for businesses.",
-    image:
-      "/photos/bride-red-dupatta-veil-portrait.jpg",
+    image: "/photos/bride-red-dupatta-veil-portrait.jpg",
   },
   {
-    title: "Live Telecast",
-    short: "Multi-platform live streaming for your event.",
+    title: "Customised Keepsakes",
+    short: "Albums, frames and gifts from your shoot.",
     description:
-      "Professional live streaming to Facebook, YouTube, Instagram and Twitter — so the people who matter can be present from anywhere in the world.",
-    image:
-      "/photos/engagement-couple-closeup-pose.jpg",
+      "Hand-finished wedding albums, framed portraits, photo books and bespoke keepsakes — designed in-studio so the best frames from your shoot live somewhere you can hold them.",
+    image: "/photos/engagement-couple-closeup-pose.jpg",
   },
 ];
 
-export const portfolio = [
+// Curated collections — every shoot has its own visual chapter.
+export const collections = [
   {
+    id: "harmanjeet-tavleen",
     title: "Harmanjeet & Tavleen",
+    subtitle: "A Sikh wedding · New Delhi",
     category: "Wedding",
-    image:
-      "/photos/bride-red-dupatta-veil-portrait.jpg",
-  },
-  {
-    title: "Ring Ceremony — Staircase",
-    category: "Engagement",
-    image:
+    cover: "/photos/ring-ceremony-staircase-portrait-couple.jpg",
+    images: [
       "/photos/ring-ceremony-staircase-portrait-couple.jpg",
-  },
-  {
-    title: "The Quiet Glow",
-    category: "Maternity",
-    image:
-      "/photos/maternity-shoot-image.jpg",
-  },
-  {
-    title: "Tiny Hands",
-    category: "Newborn",
-    image: "/photos/baby-shoot.jpg",
-  },
-  {
-    title: "25 Years, Still Us",
-    category: "Anniversary",
-    image:
-      "/photos/25-anniversary-couple.jpg",
-  },
-  {
-    title: "First Candle",
-    category: "Birthday",
-    image:
-      "/photos/baby-birthday-celebration.jpg",
-  },
-  {
-    title: "Pre-Wedding Reverie",
-    category: "Pre-Wedding",
-    image:
-      "/photos/pre-wedding-photoshoot.jpg",
-  },
-  {
-    title: "Deepanshu & Bandana",
-    category: "Wedding",
-    image:
-      "/photos/close-up-shot-bride-groom.jpg",
-  },
-  {
-    title: "Engagement Closeup",
-    category: "Engagement",
-    image:
-      "/photos/engagement-couple-closeup-pose.jpg",
-  },
-  {
-    title: "The Groom's Look",
-    category: "Wedding",
-    image:
+      "/photos/groom-full-portrait1.jpg",
+      "/photos/couple-portrait-ring-ceremony.jpg",
+      "/photos/engagement-groom-staircase-portrait.jpg",
+      "/photos/bride-solo-portrait-ring-ceremony.jpg",
       "/photos/ring-ceremony-groom-portrait.jpg",
+      "/photos/engagement-couple-closeup-pose.jpg",
+      "/photos/engagement-couple-portrait.jpg",
+    ],
+  },
+  {
+    id: "deepanshu-bandana",
+    title: "Deepanshu & Bandana",
+    subtitle: "A grand North-Indian wedding",
+    category: "Wedding",
+    cover: "/photos/bridal-wedding-portrait.jpg",
+    images: [
+      "/photos/bridal-wedding-portrait.jpg",
+      "/photos/wedding-couple-full-portrait.jpg",
+      "/photos/wedding-bride-full-portrait.jpg",
+      "/photos/bridal-side-profile-portrait.jpg",
+      "/photos/engagement-couple-close-portrait.jpg",
+      "/photos/groom-portrait.jpg",
+      "/photos/ring-ceremony-bride-portrait.jpg",
+      "/photos/wedding-varmala-moment.jpg",
+      "/photos/bride-lehenga-royal-portrait.jpg",
+      "/photos/bride-groom-nose-to-nose-portrait.jpg",
+      "/photos/bride-red-dupatta-veil-portrait.jpg",
+      "/photos/close-up-shot-bride-groom.jpg",
+      "/photos/mirror-shot-bride.jpg",
+      "/photos/bride-groom-portrait.jpg",
+    ],
+  },
+  {
+    id: "karan-lavisa",
+    title: "Karan & Lavisa",
+    subtitle: "Pre-wedding · Glasshouse + night",
+    category: "Pre-Wedding",
+    cover: "/photos/pre-wedding-photoshoot.jpg",
+    images: [
+      "/photos/pre-wedding-photoshoot.jpg",
+      "/photos/pre-wedding-couple-portrait-night-shoot.jpg",
+      "/photos/pre-wedding-candid-indoor-shoot.jpg",
+      "/photos/pre-wedding-couple-glasshouse-shoot.jpg",
+      "/photos/couple-portrait.jpg",
+    ],
+  },
+  {
+    id: "tilt-gallery",
+    title: "Tilt Gallery",
+    subtitle: "Editorial portraits, pulled from the archive",
+    category: "Editorial",
+    cover: "/photos/Bride-light-beam-portrait.jpg",
+    images: [
+      "/photos/Bride-light-beam-portrait.jpg",
+      "/photos/bride-groom-candid-moment.jpg",
+      "/photos/black-white-couple-closeup.jpg",
+      "/photos/bride-groom-portrait-wedding.jpg",
+      "/photos/artistic-indian-bridal-portrait.jpg",
+      "/photos/bride-black-white-portrait.jpg",
+      "/photos/bride-royal-photoshoot.jpg",
+      "/photos/bride-groom-candid.jpg",
+    ],
+  },
+  {
+    id: "lifestyle",
+    title: "Lifestyle Sessions",
+    subtitle: "Maternity · anniversaries · birthdays",
+    category: "Lifestyle",
+    cover: "/photos/maternity-shoot-image.jpg",
+    images: [
+      "/photos/maternity-shoot-image.jpg",
+      "/photos/baby-shoot.jpg",
+      "/photos/25-anniversary-couple.jpg",
+      "/photos/baby-birthday-celebration.jpg",
+    ],
   },
 ];
+
+export const portfolio = collections.flatMap((c) =>
+  c.images.map((image, i) => ({
+    title: i === 0 ? c.title : `${c.title} · ${i + 1}`,
+    category: c.category,
+    image,
+  }))
+);
 
 export const whyUs = [
   {
@@ -224,4 +254,83 @@ export const stats = [
   { k: "1500+", v: "Weddings filmed" },
   { k: "50k+", v: "Frames delivered" },
   { k: "100%", v: "Stories, not stock" },
+];
+
+export const kidsGallery = [
+  {
+    src: "/photos/baby-girl-running-in-park.jpg",
+    caption: "Park run · golden hour",
+  },
+  {
+    src: "/photos/Baby-Shoot-Edit-38.jpg",
+    caption: "Studio · soft light",
+  },
+  {
+    src: "/photos/baby-girl-pink-dress-photoshoot.jpg",
+    caption: "Pink dress · candid",
+  },
+  {
+    src: "/photos/cute-girl-playground-portrait.jpg",
+    caption: "Playground · play day",
+  },
+];
+
+export const liveTelecast = {
+  intro:
+    "Bring distant family into the front row. We stream weddings, ceremonies and corporate events live to YouTube, Facebook, Instagram and private links — in HD, with multi-camera coverage and professional audio.",
+  features: [
+    {
+      title: "Multi-camera production",
+      body: "Two- to four-camera HD/4K setups with professional vision mixing — never a single static angle.",
+    },
+    {
+      title: "Watch from any device",
+      body: "Phone, tablet, laptop or smart TV. No app or download required for your guests.",
+    },
+    {
+      title: "Replay & archive",
+      body: "Every stream is recorded and handed back to you, so the moment is yours to revisit.",
+    },
+    {
+      title: "Multi-platform delivery",
+      body: "YouTube, Facebook, Instagram, Twitter and private links — broadcast simultaneously to wherever your people are.",
+    },
+    {
+      title: "Custom event production",
+      body: "Virtual, hybrid and large-scale event production with on-site graphics, lower-thirds and branded overlays.",
+    },
+    {
+      title: "Reliable connectivity",
+      body: "Bonded mobile uplinks and on-site backup so the broadcast doesn't drop when it matters most.",
+    },
+  ],
+  platforms: ["YouTube", "Facebook", "Instagram", "Twitter / X", "Private link"],
+};
+
+// YouTube embed IDs (extracted from the studio's video gallery).
+export const films = [
+  { id: "3RDdoHoDIs0", title: "Wedding Highlight Film" },
+  { id: "eV8XvqJGNZA", title: "Cinematic Couple Story" },
+  { id: "ztQoCJlC4UI", title: "Engagement Edit" },
+  { id: "8cfEtRGpPEA", title: "Reception Reel" },
+  { id: "NLJlBJ56IF4", title: "Pre-Wedding Film" },
+];
+
+export const journal = [
+  {
+    title: "Why wedding photography & videography matter on the big day",
+    excerpt:
+      "Décor goes back in boxes, the food gets eaten, the music ends — your photos and your film are what stay. Here's how to think about coverage so you actually live the day.",
+    date: "2026 · Weddings",
+    image: "/photos/engagement-couple-portrait.jpg",
+    href: "#contact",
+  },
+  {
+    title: "Mistakes to avoid when choosing your wedding photographer",
+    excerpt:
+      "From booking on price alone to forgetting to ask about delivery timelines — a short checklist of things couples wish they'd known before signing the contract.",
+    date: "2026 · Weddings",
+    image: "/photos/bride-groom-portrait.jpg",
+    href: "#contact",
+  },
 ];
