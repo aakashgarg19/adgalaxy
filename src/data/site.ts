@@ -21,16 +21,30 @@ export const site = {
   ],
 };
 
-export const nav = [
+export type NavItem =
+  | { label: string; href: string; children?: never }
+  | { label: string; children: { label: string; href: string }[]; href?: never };
+
+export const nav: NavItem[] = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Collections", href: "#collections" },
-  { label: "Kids", href: "#kids" },
+  {
+    label: "Work",
+    children: [
+      { label: "Collections", href: "#collections" },
+      { label: "Little Ones", href: "#kids" },
+      { label: "Films", href: "#films" },
+    ],
+  },
   { label: "Live", href: "#live" },
-  { label: "Films", href: "#films" },
-  { label: "Stories", href: "#testimonials" },
-  { label: "Journal", href: "#journal" },
+  {
+    label: "Stories",
+    children: [
+      { label: "Testimonials", href: "#testimonials" },
+      { label: "Journal", href: "#journal" },
+    ],
+  },
   { label: "Contact", href: "#contact" },
 ];
 
