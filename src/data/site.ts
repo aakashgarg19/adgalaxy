@@ -323,11 +323,10 @@ export const liveTelecast = {
 
 // YouTube embed IDs (extracted from the studio's video gallery).
 export const films = [
-  { id: "3RDdoHoDIs0", title: "Wedding Highlight Film" },
-  { id: "eV8XvqJGNZA", title: "Cinematic Couple Story" },
-  { id: "ztQoCJlC4UI", title: "Engagement Edit" },
-  { id: "8cfEtRGpPEA", title: "Reception Reel" },
-  { id: "NLJlBJ56IF4", title: "Pre-Wedding Film" },
+  { id: "krYpMM-8GHw", title: "Aarna Birthday Teaser" },
+  { id: "us91I1dYYZ4", title: "Luv & Madhuri Pre Wedding Teaser" },
+  { id: "gipvVadFNhA", title: "GSB Footwear Production Video" },
+  { id: "SbvSyNwk9jo", title: "Luv & Monika All Functions Teaser" },
 ];
 
 export const journal = [
