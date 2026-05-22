@@ -327,6 +327,7 @@ export const films = [
   { id: "us91I1dYYZ4", title: "Luv & Madhuri Pre Wedding Teaser" },
   { id: "gipvVadFNhA", title: "GSB Footwear Production Video" },
   { id: "SbvSyNwk9jo", title: "Luv & Monika All Functions Teaser" },
+  { id: "-iW745kVZNQ", title: "Aakash & Kirti Sagan Teaser" },
 ];
 
 export const journal = [
