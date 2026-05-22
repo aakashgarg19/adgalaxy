@@ -14,7 +14,7 @@ export const site = {
     address: "C-172 Hari Nagar West, New Delhi, 110064",
   },
   social: [
-    { name: "Instagram", url: "https://instagram.com/" },
+    { name: "Instagram", url: "https://www.instagram.com/arcadedigitalgalaxy" },
     { name: "Facebook", url: "https://facebook.com/" },
     { name: "YouTube", url: "https://www.youtube.com/@arcadedigitalgalaxy" },
     { name: "Twitter", url: "https://twitter.com/" },
