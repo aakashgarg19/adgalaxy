@@ -323,11 +323,11 @@ export const liveTelecast = {
 
 // YouTube embed IDs (extracted from the studio's video gallery).
 export const films = [
-  { id: "krYpMM-8GHw", title: "Aarna Birthday Teaser" },
-  { id: "us91I1dYYZ4", title: "Luv & Madhuri Pre Wedding Teaser" },
-  { id: "gipvVadFNhA", title: "GSB Footwear Production Video" },
-  { id: "SbvSyNwk9jo", title: "Luv & Monika All Functions Teaser" },
-  { id: "-iW745kVZNQ", title: "Aakash & Kirti Sagan Teaser" },
+  { id: "krYpMM-8GHw", title: "First Birthday Teaser | Cinematic Family Celebrations" },
+  { id: "us91I1dYYZ4", title: "Best Pre-Wedding Cinematic Teaser" },
+  { id: "gipvVadFNhA", title: "Factory Tour Cinematic Teaser" },
+  { id: "SbvSyNwk9jo", title: "Cinematic Wedding Teaser" },
+  { id: "-iW745kVZNQ", title: "Cinematic Sagan Teaser" },
 ];
 
 export const journal = [
