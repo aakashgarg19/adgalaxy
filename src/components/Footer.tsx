@@ -40,6 +40,14 @@ const SocialIcon = ({ name }: { name: string }) => {
           <path d="M3 3l8.2 11.1L3.5 21h2.3l6.7-7.2L17.7 21H21l-8.6-11.7L20.5 3h-2.3l-6.3 6.8L7 3z" fill="currentColor" />
         </svg>
       );
+    case "LinkedIn":
+      return (
+        <svg {...common}>
+          <path d="M4 4h4v4H4z" fill="currentColor" stroke="none" />
+          <rect x="4" y="9" width="4" height="11" fill="currentColor" stroke="none" />
+          <path d="M10 9h4v1.6a3.6 3.6 0 0 1 3.2-1.8c2.6 0 3.8 1.7 3.8 4.5V20h-4v-5.6c0-1.4-.5-2.4-1.8-2.4-1 0-1.6.7-1.9 1.4-.1.2-.1.6-.1.9V20h-4z" fill="currentColor" stroke="none" />
+        </svg>
+      );
     default:
       return null;
   }

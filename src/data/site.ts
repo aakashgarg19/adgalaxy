@@ -18,6 +18,7 @@ export const site = {
     { name: "Facebook", url: "https://facebook.com/" },
     { name: "YouTube", url: "https://www.youtube.com/@arcadedigitalgalaxy" },
     { name: "Twitter", url: "https://twitter.com/" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/" },
   ],
 };
 
