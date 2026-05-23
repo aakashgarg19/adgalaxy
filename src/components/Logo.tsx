@@ -8,7 +8,7 @@ export default function Logo({ className = "" }: Props) {
       className={`inline-flex items-center ${className}`}
     >
       <img
-        src="/photos/logo.png"
+        src="/photos/logo.jpeg"
         alt="Arcade Digital Galaxy"
         className="h-12 w-auto sm:h-14 select-none"
         draggable={false}
