@@ -135,10 +135,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="container-x relative mt-16 hidden md:flex items-center justify-between text-[11px] uppercase tracking-widest2 text-ink-400 dark:text-cream/40">
-        <span>scroll · scroll · scroll</span>
-        <span>New Delhi, India · Worldwide</span>
-      </div>
     </section>
   );
 }
