@@ -41,7 +41,7 @@ export default {
       },
       animation: {
         "fade-up": "fadeUp 0.9s ease forwards",
-        marquee: "marquee 40s linear infinite",
+        marquee: "marquee var(--marquee-duration, 40s) linear infinite",
         shine: "shine 6s linear infinite",
       },
       keyframes: {
@@ -50,8 +50,8 @@ export default {
           "100%": { opacity: 1, transform: "translateY(0)" },
         },
         marquee: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
+          "0%": { transform: "translate3d(0, 0, 0)" },
+          "100%": { transform: "translate3d(-50%, 0, 0)" },
         },
         shine: {
           "0%": { backgroundPosition: "-200% 0" },
