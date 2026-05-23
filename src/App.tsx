@@ -14,6 +14,7 @@ import Journal from "./components/Journal";
 import CTA from "./components/CTA";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import WhatsAppFab from "./components/WhatsAppFab";
 import { useTheme } from "./hooks/useTheme";
 
 export default function App() {
@@ -43,6 +44,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppFab />
     </div>
   );
 }

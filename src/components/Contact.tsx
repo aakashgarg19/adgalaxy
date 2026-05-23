@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
 import Reveal from "./Reveal";
 import { site } from "../data/site";
 
@@ -54,7 +54,43 @@ export default function Contact() {
                 href={`mailto:${site.contact.email}`}
               />
             </Reveal>
+            <Reveal delay={0.3}>
+              <ContactRow
+                icon={<MessageCircle className="h-4 w-4" />}
+                label="WhatsApp"
+                value={site.contact.whatsappLabel}
+                href={site.contact.whatsapp}
+                external
+              />
+            </Reveal>
           </div>
+
+          <Reveal delay={0.35}>
+            <div className="mt-10 hidden lg:flex items-center gap-5 rounded-[4px] border border-ink-900/10 bg-white p-5 max-w-sm dark:border-cream/10 dark:bg-ink-800/60">
+              <a
+                href={site.contact.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open WhatsApp chat"
+                className="shrink-0 rounded-sm bg-white p-2 ring-1 ring-ink-900/10 transition hover:ring-gold-600 dark:ring-cream/15 dark:hover:ring-gold-300"
+              >
+                <img
+                  src={site.contact.whatsappQr}
+                  alt="WhatsApp QR code for Arcade Digital Galaxy"
+                  className="h-24 w-24 object-contain"
+                  loading="lazy"
+                />
+              </a>
+              <div>
+                <div className="text-[11px] uppercase tracking-widest2 text-ink-500 dark:text-cream/40">
+                  Scan to chat
+                </div>
+                <div className="font-display text-lg text-ink-900 mt-1 dark:text-cream">
+                  Open WhatsApp on your phone and scan — we usually reply within the hour.
+                </div>
+              </div>
+            </div>
+          </Reveal>
         </div>
 
         <div className="lg:col-span-7">
@@ -166,11 +202,13 @@ function ContactRow({
   label,
   value,
   href,
+  external,
 }: {
   icon: React.ReactNode;
   label: string;
   value: string;
   href?: string;
+  external?: boolean;
 }) {
   const Inner = (
     <div className="flex items-start gap-4 group">
@@ -187,5 +225,12 @@ function ContactRow({
       </div>
     </div>
   );
-  return href ? <a href={href}>{Inner}</a> : Inner;
+  if (!href) return Inner;
+  return external ? (
+    <a href={href} target="_blank" rel="noreferrer">
+      {Inner}
+    </a>
+  ) : (
+    <a href={href}>{Inner}</a>
+  );
 }

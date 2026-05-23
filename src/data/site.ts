@@ -12,11 +12,15 @@ export const site = {
     phoneRaw: "9811089656",
     email: "Admin@adgalaxy.in",
     address: "C-172 Hari Nagar West, New Delhi, 110064",
+    whatsapp: "https://wa.me/qr/QODQUR5S5OYCI1",
+    whatsappLabel: "+91 98110 89656",
+    whatsappQr: "/photos/whatsapp-qr.png",
   },
   social: [
     { name: "Instagram", url: "https://www.instagram.com/arcadedigitalgalaxy" },
     { name: "Facebook", url: "https://facebook.com/" },
     { name: "YouTube", url: "https://www.youtube.com/@arcadedigitalgalaxy" },
+    { name: "WhatsApp", url: "https://wa.me/qr/QODQUR5S5OYCI1" },
     { name: "LinkedIn", url: "https://www.linkedin.com/" },
   ],
 };
