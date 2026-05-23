@@ -3,8 +3,40 @@ import { Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
 import Reveal from "./Reveal";
 import { site } from "../data/site";
 
+type FormStatus = "idle" | "sending" | "sent" | "error";
+
 export default function Contact() {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<FormStatus>("idle");
+  const [errorMsg, setErrorMsg] = useState<string>("");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    setStatus("sending");
+    setErrorMsg("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const body = (await res.json().catch(() => ({}))) as {
+        ok?: boolean;
+        error?: string;
+      };
+      if (!res.ok || !body.ok) {
+        throw new Error(body.error || "Something went wrong. Please try again.");
+      }
+      setStatus("sent");
+      form.reset();
+      setTimeout(() => setStatus("idle"), 5000);
+    } catch (err) {
+      setStatus("error");
+      setErrorMsg(err instanceof Error ? err.message : "Network error");
+    }
+  }
 
   return (
     <section id="contact" className="relative bg-cream py-24 lg:py-32 dark:bg-ink-900">
@@ -96,13 +128,17 @@ export default function Contact() {
         <div className="lg:col-span-7">
           <Reveal>
             <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                setSent(true);
-                setTimeout(() => setSent(false), 4000);
-              }}
+              onSubmit={handleSubmit}
               className="rounded-[4px] border border-ink-900/10 bg-gradient-to-br from-white to-ink-50 p-8 sm:p-10 shadow-sm dark:border-cream/10 dark:from-ink-800/80 dark:to-ink-900 dark:shadow-none"
             >
+              <input
+                type="text"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="absolute -left-[9999px] top-auto h-0 w-0 overflow-hidden"
+              />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <Field label="Your name" name="name" placeholder="Anaya & Rohit" />
                 <Field
@@ -157,10 +193,22 @@ export default function Contact() {
 
               <div className="mt-8 flex items-center justify-between gap-4 flex-wrap">
                 <p className="text-xs text-ink-400 dark:text-cream/40">
-                  By sending this you agree to be contacted about your enquiry.
+                  {status === "error" && errorMsg
+                    ? <span className="text-red-600 dark:text-red-400">{errorMsg}</span>
+                    : "By sending this you agree to be contacted about your enquiry."}
                 </p>
-                <button type="submit" className="btn-primary">
-                  {sent ? "Message sent ✓" : (<>Send enquiry <Send className="h-4 w-4" /></>)}
+                <button
+                  type="submit"
+                  className="btn-primary disabled:opacity-60 disabled:cursor-not-allowed"
+                  disabled={status === "sending" || status === "sent"}
+                >
+                  {status === "sent" ? (
+                    "Message sent ✓"
+                  ) : status === "sending" ? (
+                    "Sending..."
+                  ) : (
+                    <>Send enquiry <Send className="h-4 w-4" /></>
+                  )}
                 </button>
               </div>
             </form>
